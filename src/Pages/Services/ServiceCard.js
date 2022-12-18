@@ -1,18 +1,31 @@
 import React from 'react';
 
-const ServiceCard = () => {
+const ServiceCard = ({ service }) => {
+    const { title, img, price, description, rating } = service;
     return (
-        <div className="card w-80 bg-base-100 shadow-xl">
-            <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+        <div className="card text-start w-80 bg-base-100 shadow-xl">
+            <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
-                    Shoes!
+                    {title}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                <h4>Price: $ { price}</h4>
+                <div className="card-actions justify-between mt-3">
+                    <button className="btn btn-outline">Order </button>
+                    <button className="btn btn-active">See Details</button>
+                </div>
+                <div className="rating rating-xs grid grid-cols-1 md:grid-cols-2 mt-3 text-center">
+                    <div>
+                        <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <div>
+                        {rating}
+                    </div>
                 </div>
             </div>
         </div>
