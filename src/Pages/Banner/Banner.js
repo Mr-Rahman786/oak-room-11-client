@@ -48,6 +48,7 @@ const Banner = () => {
     ]
     return (
         <div className="carousel w-full mt-5">
+            
             {
                 caroselData.map(slide => <CaroselItem
                     key={slide.id}

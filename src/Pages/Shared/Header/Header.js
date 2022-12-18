@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaSearch, FaTwitch, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import mainIcons from '../../../assest/assest/logo (2).png'
 const Header = () => {
@@ -30,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end flex">
-                <button className="btn btn-outline btn-warning me-5">Buy Now</button>
+                <button className="btn btn-outline btn-warning me-5">Log In</button>
             </div>
         </div>
     );
