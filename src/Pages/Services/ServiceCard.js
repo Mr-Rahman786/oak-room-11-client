@@ -4,7 +4,11 @@ const ServiceCard = ({ service }) => {
     const { title, img, price, description, rating } = service;
     return (
         <div className="card text-start ml-7 w-80 bg-base-100 card-main-box shadow-xl">
-            <figure><img src={img} alt="" /></figure>
+
+            <figure>
+                <img src={img} alt="" />
+            </figure>
+
             <div className="card-body">
                 <h2 className="card-title">
                     {title}
