@@ -3,7 +3,7 @@ import logo from '../../../assest/assest/logo (2).png'
 import './Footer.css'
 const Footer = () => {
     return (
-        <footer className="footer mt-8 p-20 bg-base-200 text-base-content bg-black text-white">
+        <footer className="footer mt-8 p-20">
             <div>
                 <img className='logoImg' src={logo} alt="" />
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>

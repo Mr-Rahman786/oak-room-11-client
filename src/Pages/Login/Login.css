@@ -15,7 +15,7 @@
 .box {
     position: relative;
     width: 380px;
-    height: 420px;
+    height: 450px;
     background-color: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
@@ -134,7 +134,7 @@
 }
 .links a{
     margin: 10px 0;
-    font-size: 0.75em;
+    font-size: 0.95em;
     color: #8f8f8f;
 }
 .links a:hover,
