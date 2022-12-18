@@ -32,10 +32,10 @@ const Phone = () => {
                     </div>
                 </div>
                 <div className="card-body text-format">
-                    <h2 className="card-title text-5xl">New album is released!</h2>
+                    <h2 className="card-title text-5xl">Get The Download The 'APP' and more Fun</h2>
                     <p>Click the button to listen on Spotiwhy app.</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-outline btn-accent">Button</button>
+                        <button className="btn btn-outline btn-accent">See More</button>
                     </div>
                 </div>
             </div>
