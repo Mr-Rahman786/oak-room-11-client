@@ -1,5 +1,9 @@
 import React from 'react';
 import './Banner.css'
+import Typewriter from 'typewriter-effect'
+
+
+
 const CaroselItem = ({ slide }) => {
     const { sliderImg, id, prev, next } = slide;
     return (
@@ -10,17 +14,27 @@ const CaroselItem = ({ slide }) => {
                 <img src={sliderImg} alt="" className="w-full" />
             </div>
             
-            <div className="absolute flex justify-start transform -translate-y-0 left-20 right-5 top-1/4">
-                <h1 className='text-5xl font-bold text-white'>
-                    Food Concerened <br />
-                    Make Happy <br />
-                    Get Offer
-
-                </h1>
+            <div className="absolute flex animation justify-start transform -translate-y-0 left-20 right-5 top-1/4">
+                <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter
+                            .typeString("Food Concerned Make A Whole")
+                            .pauseFor(1000)
+                            .deleteAll()
+                            .typeString("We Are Polite have <br/> yet more Fun")
+                            .pauseFor(1000)
+                            .deleteAll()
+                            .start()
+                            .typeString("This Is Mustafiz Food <br/>  Corcened You Deserve is better ")
+                            .pauseFor(1000)
+                            .deleteAll()
+                            .start()
+                    }}
+                    className="phone" />
             </div>
             
             <div className="absolute flex justify-start w-2/4 transform -translate-y-0 left-20 right-5 top-1/2">
-                <p className='text-white mt-8'>We make have shold food 1/2 offer and <br />
+                <p className='text-white mt-10 details'>We make have shold food 1/2 offer and <br />
                     this mon best offer for your Imagination
                     so why you late it now get this offer
                 </p>

@@ -5,7 +5,6 @@ import img3 from '../../assest/assest/carosel-main/foodmenu-1.jpg'
 import img4 from '../../assest/assest/carosel-main/foodmenu-4.jpg'
 import img5 from '../../assest/assest/carosel-main/foodmenu-2.jpg'
 import img6 from '../../assest/assest/carosel-main/foodmenu-5.jpg'
-
 import CaroselItem from './CaroselItem';
 const Banner = () => {
     const caroselData = [

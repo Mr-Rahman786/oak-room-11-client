@@ -4,7 +4,7 @@ import './Map.css'
 import img from '../../assest/assest/map.png'
 const Map = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl mt-20">
+        <div className="card lg:card-side bg-base-100 shadow-xl mt-20 ">
             <figure>
                 <img src={img} alt="" />   
             </figure>
