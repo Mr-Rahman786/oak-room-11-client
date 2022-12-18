@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css'
 const Login = () => {
+   
+    const handleLogIn = event => {
+        event.preventDefault();
+    }
+    
     return (
         <div className='body'>
             <div className='box'>
-                <div className="form">
+                <form onSubmit={handleLogIn} className="form">
                     <h2>Sign In</h2>
                     <div className="inputBox">
                         <input type="email" name="email" id="" required />
@@ -22,7 +27,7 @@ const Login = () => {
                         <Link>Signup</Link>
                     </div>
                     <input type="submit" value="login" />
-                </div>
+                </form>
             </div>
         </div>
     );
