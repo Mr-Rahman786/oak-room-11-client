@@ -10,7 +10,7 @@ const CaroselItem = ({ slide }) => {
         <div id={`slide${id}`} className="carousel-item relative w-full carouselHeight">
             
             <div className='carousel-image'>
-                <progress className="progress w-full"></progress>
+                <progress className="progress w-full justify-center text-center"></progress>
                 <img src={sliderImg} alt="" className="w-full" />
             </div>
             
@@ -47,7 +47,6 @@ const CaroselItem = ({ slide }) => {
                 <a href={`#slide${prev}`} className="btn btn-circle mx-10">❮</a>
                 <a href={`#slide${next}`} className="btn btn-circle bg-orange-500 border-none">❯</a>
             </div>
-            
         </div>
         
     );

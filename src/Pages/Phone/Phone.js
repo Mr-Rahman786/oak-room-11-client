@@ -5,8 +5,8 @@ import './Phone.css'
 const Phone = () => {
     return (
         <div>
-            <div className="card lg:card-side bg-base-100 mt-24 container max-w-screen-lg mx-auto">
-                <figure>
+            <div className="card lg:card-side grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-base-100 bg-black mt-5 container phonemain  p-5">
+                <div>
                     <div className="mockup-phone border-danger">
                         <div className="camera"></div>
                         <div className="display">
@@ -30,12 +30,12 @@ const Phone = () => {
                             </div>
                         </div>
                     </div>
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">New album is released!</h2>
+                </div>
+                <div className="card-body text-format">
+                    <h2 className="card-title text-5xl">New album is released!</h2>
                     <p>Click the button to listen on Spotiwhy app.</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Listen</button>
+                    <div className="card-actions justify-center">
+                        <button className="btn btn-outline btn-accent">Button</button>
                     </div>
                 </div>
             </div>
