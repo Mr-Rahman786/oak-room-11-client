@@ -16,6 +16,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => console.error(error))
+        form.reset()
         
     }
     
