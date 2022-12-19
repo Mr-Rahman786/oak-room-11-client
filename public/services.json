@@ -1,6 +1,5 @@
 [
     {
-        "_id": "635a0c0b64a6d231228942ae",
         "service_id": "04",
         "rating":"4.5",
         "title": "Speghetti Alla Putanisca",
@@ -27,7 +26,6 @@
         ]
     },
     {
-        "_id": "635a0c0b64a6d231228942af",
         "service_id": "05",
         "title": "Tanduri Chiken",
         "rating": "4.0",
@@ -54,7 +52,6 @@
         ]
     },
     {
-        "_id": "635b591a1dafe382a9da8c96",
         "service_id": "01",
         "rating": "5.0",
         "title": "Fish Fry",
@@ -81,7 +78,6 @@
         ]
     },
     {
-        "_id": "635b5afc1dafe382a9da8c98",
         "service_id": "02",
         "title": "Fizza Nut",
         "rating": "4.5",
@@ -108,7 +104,6 @@
         ]
     },
     {
-        "_id": "635b5b691dafe382a9da8c99",
         "service_id": "03",
         "rating": "4.3",
         "title": "Burger Solo Pes",
@@ -135,7 +130,6 @@
         ]
     },
     {
-        "_id": "635b5ba51dafe382a9da8c9a",
         "service_id": "06",
         "rating": "4.2",
         "title": "Kacchi Dom Biryani",

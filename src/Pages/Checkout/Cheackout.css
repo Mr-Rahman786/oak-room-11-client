@@ -1,0 +1,22 @@
+.checkout {
+    background-image: url(../../assest/assest/carosel-main/foodmenu-6.jpg);
+    /* opacity: 0.5; */
+    
+    -webkit-background-size:cover ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(70px);
+    height: 60%;
+    width: 100%;
+    
+}
+.form-content
+{
+/* position: absolute; */
+z-index: 2;
+text-align: center;
+background: rgba(0, 0, 0, 0.7); 
+color:black;
+border: 1px inset #fff;
+}
