@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Cardservice.css'
 const ServiceCard = ({ service }) => {
     const { title, img, price, description, rating, _id } = service;
+    const location = useLocation()
+    const nevigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
     return (
         <div className="card text-start ml-7 w-80  card-main-box shadow-xl">
 
@@ -18,7 +21,9 @@ const ServiceCard = ({ service }) => {
                 <h4>Price: $ { price}</h4>
                 <div className="card-actions justify-between mt-3">
                     <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-outline">Order </button>
+                        <button className="btn btn-outline">Order
+                        </button>
+                        
                     </Link>
                     <button className="btn btn-active">See Details</button>
                 </div>

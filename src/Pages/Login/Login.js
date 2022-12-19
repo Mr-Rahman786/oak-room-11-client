@@ -1,20 +1,27 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import './Login.css'
 const Login = () => {
     const { login } = useContext(AuthContext);
+    const location = useLocation()
+    const nevigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
+
+
     const handleLogIn = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
+        
         login(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                nevigate(from,{replace:true})
             })
+            
             .catch(error => console.error(error))
         form.reset()
         
@@ -24,7 +31,7 @@ const Login = () => {
         <div className='body'>
             <div className='box'>
                 <form onSubmit={handleLogIn} className="form">
-                    <h2>Sign In</h2>
+                    <h2>Log In</h2>
                     <div className="inputBox">
                         <input type="email" name="email" id="" required />
                         <span> Enter Your Email</span>
@@ -36,7 +43,7 @@ const Login = () => {
                         <i></i>
                     </div>
                     <div className="links">
-                        <Link>Forget Password</Link>
+                        <Link>have not account?</Link>
                         <Link to='/signup'>Signup</Link>
                     </div>
                     <input type="submit" value="login" />

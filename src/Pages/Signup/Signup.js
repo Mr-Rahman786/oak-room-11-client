@@ -1,12 +1,19 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import './Signup.css'
+import { FaBeer, FaGithub, FaGoogle } from 'react-icons/fa';
+import SociallogIn from '../Login/SociallogIn';
 
 
 
 const Signup = () => {
     const { createUser } = useContext(AuthContext);
+    const location = useLocation()
+    const nevigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/login';
+
 
     const handleSignup = event => {
         event.preventDefault();
@@ -17,16 +24,20 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                
+                nevigate(from, { replace: true })
             })
             .catch(err => console.error(err));
         form.reset()
+
+    }
+    const googlesignUp = () => {
+        
     }
 
     return (
         <div>
             <form onSubmit={handleSignup} className='body'>
-                <div className='box'>
+                <div className='boxx'>
                     <div className="form">
                         <h2>SignUp</h2>
                         <div className="inputBox">
@@ -49,6 +60,7 @@ const Signup = () => {
                             <Link to='/login'>login</Link>
                         </div>
                         <input type="submit" value="signup" />
+                        <SociallogIn></SociallogIn>
                     </div>
                 </div>
             </form>

@@ -2,11 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import ReviewRow from '../ReviewRow/ReviewRow';
 import swal from 'sweetalert';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Review = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
-
+    const location = useLocation()
+    const nevigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
     useEffect(() => {
         fetch(`http://localhost:5000/review?email=${user?.email}`)
@@ -23,6 +26,7 @@ const Review = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
+                    nevigate(from, { replace: true })
                     if (data.deletedCount > 0) {
                         swal({
                             title: "Deleted Comment Successfully",
@@ -32,16 +36,13 @@ const Review = () => {
                         const remaining = reviews.filter(reviw => reviw._id !== id);
                         setReviews(remaining)
                     }
-                    if (reviews.length !==0) {
-                        return'No review'
-                    }
                 })
         }
     }
 
     return (
         <div>
-            <h2 className='text-3xl mt-4 text-center'>Review : {reviews.length? reviews.length:'No Review yet'}</h2>
+            <h2 className='text-3xl mt-4 text-center'>Review : {reviews.length? reviews.length:'No Review yet!'}</h2>
             
             <div className="overflow-x-auto w-full mt-3">
                 <table className="table w-full">
