@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import './Login.css'
+import SociallogIn from './SociallogIn';
 const Login = () => {
     const { login } = useContext(AuthContext);
     const location = useLocation()
@@ -29,7 +30,7 @@ const Login = () => {
     
     return (
         <div className='body'>
-            <div className='box'>
+            <div className='boxx'>
                 <form onSubmit={handleLogIn} className="form">
                     <h2>Log In</h2>
                     <div className="inputBox">
@@ -47,6 +48,8 @@ const Login = () => {
                         <Link to='/signup'>Signup</Link>
                     </div>
                     <input type="submit" value="login" />
+                    
+                    <SociallogIn></SociallogIn>
                 </form>
             </div>
         </div>

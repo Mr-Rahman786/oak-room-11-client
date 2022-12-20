@@ -25,7 +25,10 @@ const ServiceCard = ({ service }) => {
                         </button>
                         
                     </Link>
-                    <button className="btn btn-active">See Details</button>
+                    <Link to='/details'>
+                        <button className="btn btn-active btn-ghost">See Details</button>
+                    </Link>
+                    
                 </div>
                 <div className="rating rating-xs grid grid-cols-1 md:grid-cols-2 mt-3 text-center">
                     <div>

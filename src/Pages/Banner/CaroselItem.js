@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css'
 import Typewriter from 'typewriter-effect'
-
+import './Carosel.css'
 
 
 const CaroselItem = ({ slide }) => {
@@ -33,7 +33,7 @@ const CaroselItem = ({ slide }) => {
                     className="phone" />
             </div>
             
-            <div className="absolute flex justify-start w-2/4 transform -translate-y-0 left-20 right-5 top-1/2">
+            <div className="absolute flex justify-start w-2/4 details-banner transform -translate-y-0 left-20 right-5 top-1/2">
                 <p className='text-white mt-10 details'>We make have shold food 1/2 offer and <br />
                     this mon best offer for your Imagination
                     so why you late it now get this offer
