@@ -12,7 +12,7 @@ const Review = () => {
     const from = location.state?.from?.pathname || '/';
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(`https://food-junction-server.vercel.app/review?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
@@ -20,7 +20,7 @@ const Review = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to delete this comment?');
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://food-junction-server.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

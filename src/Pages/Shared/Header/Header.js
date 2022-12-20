@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'
 import mainIcons from '../../../assest/assest/logo (2).png'
 import { AuthContext } from '../../../Context/Authprovider/Authprovider';
 const Header = () => {
@@ -8,12 +9,13 @@ const Header = () => {
     const handleLogout = () => {
         logOut()
             .then()
-        .catch()
+            .catch()
     }
 
     const menuItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         <li className='font-semibold'><Link to='/services'>Service</Link></li>
+        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
         {
             user?.email ?
                 <>
@@ -25,6 +27,15 @@ const Header = () => {
                 :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
         }
+
+        {
+            user?.email &&
+            <div className='uid-main'>
+                    <p>{user.displayName}</p>
+                <img src={user.photoURL} alt="" />
+            </div>
+        }
+
     </>
 
     return (

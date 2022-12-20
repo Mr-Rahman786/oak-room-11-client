@@ -5,7 +5,7 @@ import './Phone.css'
 const Phone = () => {
     return (
         <div>
-            <div className="card lg:card-side grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-base-100 bg-black mt-5 container phonemain  p-5">
+            <div className="card lg:card-side grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  bg-black mt-5 container mx-auto phonemain w-full p-5">
                 <div>
                     <div className="mockup-phone border-danger">
                         <div className="camera"></div>

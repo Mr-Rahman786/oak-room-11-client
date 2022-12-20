@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import './Signup.css'
-import { FaBeer, FaGithub, FaGoogle } from 'react-icons/fa';
 import SociallogIn from '../Login/SociallogIn';
 
 
@@ -29,9 +28,6 @@ const Signup = () => {
             .catch(err => console.error(err));
         form.reset()
 
-    }
-    const googlesignUp = () => {
-        
     }
 
     return (

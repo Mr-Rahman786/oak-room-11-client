@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://food-junction-server.vercel.app/services/${params.id}`),
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
             },
             {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: '/review',
                 element: <Review></Review>
+            },
+            {
+                path: '/blog',
+                element:<Blog></Blog>
             }
         ]
     }
