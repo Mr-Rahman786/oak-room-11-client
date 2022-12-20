@@ -21,7 +21,7 @@ const ServiceCard = ({ service }) => {
                 <h4>Price: $ { price}</h4>
                 <div className="card-actions justify-between mt-3">
                     <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-outline">Order
+                        <button className="btn btn-outline">Review 
                         </button>
                         
                     </Link>
